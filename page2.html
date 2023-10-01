@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sony Leaks Download</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .background img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Styling for the invisible button */
+        #fullScreenButton {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        /* Styling for the text in the bottom right corner */
+        #bottomRightText {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <img src="https://images-ext-2.discordapp.net/external/PZP4UJ1daqNpq6mcHN2CwOqSS4fWxP7_LpN39hPAolc/https/porngif.co/wp-content/uploads/2023/01/103652-wonderful-point-of-glance.gif?width=289&height=562" alt="Background GIF">
+    </div>
+
+    <audio id="audioElement">
+        <source src="audio.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Invisible full-screen button -->
+    <button id="fullScreenButton"></button>
+
+    <!-- Text in the bottom right corner -->
+    <div id="bottomRightText">(:</div>
+
+    <script>
+        // Get the audio element.
+        const audioElement = document.getElementById("audioElement");
+        
+        // Function to play the audio.
+        function playAudio() {
+            // Check if the audio is paused, and play it.
+            if (audioElement.paused) {
+                audioElement.play();
+            }
+        }
+
+        // Add a click event listener to the document.
+        document.addEventListener("click", playAudio);
+
+        // Full-screen button click event listener.
+        const fullScreenButton = document.getElementById("fullScreenButton");
+        fullScreenButton.addEventListener("click", () => {
+            const body = document.documentElement;
+
+            if (body.requestFullscreen) {
+                body.requestFullscreen();
+            } else if (body.mozRequestFullScreen) { /* Firefox */
+                body.mozRequestFullScreen();
+            } else if (body.webkitRequestFullscreen) { /* Chrome, Safari, and Opera */
+                body.webkitRequestFullscreen();
+            } else if (body.msRequestFullscreen) { /* IE/Edge */
+                body.msRequestFullscreen();
+            }
+        });
+    </script>
+</body>
+</html>
